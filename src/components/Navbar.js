@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Logo from '../assets/images/globetech-logo.png';
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -34,14 +34,16 @@ function Navbar() {
                                 <div className="hidden sm:block">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => (
-                                            <Link
+                                            <NavLink
                                                 key={item.name}
                                                 to={item.to}
-                                                style={{ color: '#8FE5FF' }}
-                                                className='hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
+                                                style={({ isActive }) =>
+                                                    isActive ? { color: '#D7F561' } : { color: '#8FE5FF' }
+                                                }
+                                                className='hover:underline px-3 py-2 rounded-md text-sm font-medium'
                                             >
                                                 {item.name}
-                                            </Link>
+                                            </NavLink>
                                         ))}
                                     </div>
                                 </div>
@@ -52,14 +54,16 @@ function Navbar() {
                     <Disclosure.Panel className="sm:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1">
                             {navigation.map((item) => (
-                                <Link
+                                <NavLink
                                     key={item.name}
                                     to={item.to}
-                                    style={{ color: '#8FE5FF' }}
+                                    style={({ isActive }) =>
+                                        isActive ? { color: '#D7F561' } : { color: '#8FE5FF' }
+                                    }
                                     className='block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
                                 >
                                     {item.name}
-                                </Link>
+                                </NavLink>
                             ))}
                         </div>
                     </Disclosure.Panel>
