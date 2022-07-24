@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 .App {
   text-align: center;
   color: white;
   background: linear-gradient(246.24deg, #00094D 0%, #000424 100%);
-  height: 100vh;
+  font-family: 'Poppins', sans-serif;
 }
