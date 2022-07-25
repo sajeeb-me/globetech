@@ -8,7 +8,6 @@ import Services from './pages/Services/Services';
 function App() {
   return (
     <section className="App">
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/services' element={<Services />} />
