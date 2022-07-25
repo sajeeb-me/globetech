@@ -1,0 +1,7 @@
+.serviceCard:hover~.rocketIcon {
+    transform: translateX(650%);
+}
+
+.rocketIcon {
+    transition: transform 1s;
+}

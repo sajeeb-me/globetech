@@ -5,8 +5,12 @@ import Rocket from '../../assets/icons/Vector.png';
 const Banner = () => {
     return (
         <section className='max-w-7xl mx-auto px-4 lg:px-20 grid grid-cols-1 md:grid-cols-2 items-center' style={{ color: '#28ACE2' }}>
+            {/* left side */}
             <article className='text-left lg:pr-28'>
-                <div className='flex items-center gap-1 mb-10'>
+                {/* rocket icon */}
+                <div
+                    className='flex items-center gap-1 pb-10 hover:translate-x-full duration-500 ease-in-out'
+                >
                     <div>
                         <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
                         <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
@@ -14,6 +18,7 @@ const Banner = () => {
                     </div>
                     <img className='h-14' src={Rocket} alt="" />
                 </div>
+                {/* banner text and buttons */}
                 <h1 className='text-5xl lg:text-7xl font-bold leading-normal'>
                     Welcome to
                     <span className='block' style={{ color: 'rgba(203, 242, 49, 1)' }}>
@@ -26,6 +31,8 @@ const Banner = () => {
                     <button style={{ borderColor: '#28ACE2' }} className='py-3 px-8 border rounded-sm'>Our Mission</button>
                 </div>
             </article>
+
+            {/* right side */}
             <article>
                 <img className='py-20 lg:pl-20' src={BannerImage} alt="" />
             </article>

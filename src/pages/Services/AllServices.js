@@ -6,6 +6,7 @@ import ERPSolution from '../../assets/images/erp-solution.png'
 import BulkSMSService from '../../assets/images/bulk-sms-service.png'
 import GraphicDesign from '../../assets/images/graphic-design.png'
 import DigitalMarketing from '../../assets/images/digital-marketing.png'
+import './AllServices.css'
 
 const AllServices = () => {
     const services = [
@@ -47,17 +48,7 @@ const AllServices = () => {
         },
     ]
     return (
-        <section className='max-w-7xl mx-auto px-4 lg:px-20'>
-
-            {/* rocket icon */}
-            <article className='flex items-center gap-1 my-10'>
-                <div>
-                    <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
-                    <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
-                    <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
-                </div>
-                <img className='h-14' src={Rocket} alt="" />
-            </article>
+        <section className='max-w-7xl mx-auto px-4 lg:px-20 mt-28'>
             <article>
                 <div className='my-5'>
                     <h3 className='uppercase text-2xl tracking-widest'>Services</h3>
@@ -69,7 +60,7 @@ const AllServices = () => {
                             const { id, name, details, img } = service;
                             return <article
                                 key={id}
-                                className='bg-white text-black p-7 rounded-xl'
+                                className='bg-white text-black p-7 rounded-xl serviceCard'
                             >
                                 <div className='h-52'>
                                     <img src={img} alt="" />
@@ -80,6 +71,15 @@ const AllServices = () => {
                             </article>
                         })
                     }
+                    {/* rocket icon */}
+                    <article className='flex items-center gap-1 my-10 rocketIcon absolute top-10'>
+                        <div>
+                            <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
+                            <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
+                            <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
+                        </div>
+                        <img className='h-14' src={Rocket} alt="" />
+                    </article>
                 </section>
             </article>
         </section>
