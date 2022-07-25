@@ -20,8 +20,8 @@ function Home() {
                         Globetech
                     </span>
                 </h1>
-                <p className='text-lg text-justify'>We are committed to deliver <span style={{ color: 'rgba(203, 242, 49, 1)' }}>best IT services</span>. Our Consultants have experience in working with clients. We have extensive experience in the software application space and also offer a broad range and depth of technology.</p>
-                <div className='mt-8 flex gap-3'>
+                <p className='text-lg text-justify mt-4 mb-8'>We are committed to deliver <span style={{ color: 'rgba(203, 242, 49, 1)' }}>best IT services</span>. Our Consultants have experience in working with clients. We have extensive experience in the software application space and also offer a broad range and depth of technology.</p>
+                <div className='flex gap-3'>
                     <button style={{ background: 'rgba(203, 242, 49, 1)' }} className='py-3 px-8 rounded-sm text-black font-semibold'>Support us</button>
                     <button style={{ borderColor: '#28ACE2' }} className='py-3 px-8 border rounded-sm'>Our Mission</button>
                 </div>
