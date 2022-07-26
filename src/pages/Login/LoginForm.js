@@ -54,7 +54,7 @@ const LoginForm = () => {
                     className="p-3 rounded-lg w-full mt-3 text-white cursor-pointer"
                 />
             </form>
-            <p className="mt-2 text-sm">Don't have account? <Link to='/login/registerform'>Register now</Link></p>
+            <p className="mt-2 text-sm">Don't have account? <Link to='/login/registerform' className='font-semibold'>Register now</Link></p>
         </section>
     );
 };
