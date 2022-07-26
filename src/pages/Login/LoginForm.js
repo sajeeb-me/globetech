@@ -1,13 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { EyeIcon, EyeOffIcon } from '@heroicons/react/solid'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from "../../authentication/firebase.init";
+import PageLoading from "../PageLoading.js/PageLoading";
 
 const LoginForm = () => {
+    const navigate = useNavigate();
     const [showPass, setShowPass] = useState(false)
     const { register, formState: { errors }, handleSubmit } = useForm();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    useEffect(() => {
+        if (user) {
+            navigate('/')
+        }
+    }, [user, navigate])
+
+    if (loading) {
+        return <PageLoading />
+    }
+
+    error && console.log(error.message);
+
     const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
+        signInWithEmailAndPassword(data.email, data.password)
     };
 
     return (

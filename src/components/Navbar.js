@@ -2,14 +2,19 @@ import { Link, NavLink } from 'react-router-dom'
 import Logo from '../assets/images/globetech-logo.png';
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../authentication/firebase.init';
+import { signOut } from 'firebase/auth';
 
-const navigation = [
-    { name: 'Home', to: '/' },
-    { name: 'Services', to: '/services' },
-    { name: 'Login', to: '/login' },
-]
 
 function Navbar() {
+    const [user] = useAuthState(auth);
+
+    const navigation = [
+        { name: 'Home', to: '/' },
+        { name: 'Services', to: '/services' },
+    ]
+
     return (
         <Disclosure as="nav">
             {({ open }) => (
@@ -47,6 +52,24 @@ function Navbar() {
                                                 {item.name}
                                             </NavLink>
                                         ))}
+                                        {
+                                            user ?
+                                                <button
+                                                    onClick={() => signOut(auth)}
+                                                    style={{ color: '#8FE5FF' }}
+                                                    className='hover:underline px-3 py-2 rounded-md text-sm font-medium'
+                                                >
+                                                    Logout
+                                                </button>
+                                                :
+                                                <NavLink
+                                                    to='/login'
+                                                    style={{ color: '#8FE5FF' }}
+                                                    className='hover:underline px-3 py-2 rounded-md text-sm font-medium'
+                                                >
+                                                    Login
+                                                </NavLink>
+                                        }
                                     </div>
                                 </div>
                             </div>
