@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Logo from '../assets/images/globetech-logo.png';
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -29,7 +29,9 @@ function Navbar() {
                             </div>
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                                 <div className="flex-shrink-0 flex items-center">
-                                    <img className='h-7' src={Logo} alt="" />
+                                    <Link to='/'>
+                                        <img className='h-7' src={Logo} alt="" />
+                                    </Link>
                                 </div>
                                 <div className="hidden sm:block">
                                     <div className="flex space-x-4">

@@ -48,7 +48,7 @@ const AllServices = () => {
         },
     ]
     return (
-        <section className='max-w-7xl mx-auto px-4 lg:px-20 mt-28'>
+        <section className='max-w-7xl mx-auto px-4 lg:px-20 lg:mt-28 overflow-hidden'>
             <article>
                 <div className='my-5'>
                     <h3 className='uppercase text-2xl tracking-widest'>Services</h3>
@@ -72,7 +72,7 @@ const AllServices = () => {
                         })
                     }
                     {/* rocket icon */}
-                    <article className='flex items-center gap-1 my-10 rocketIcon absolute top-10'>
+                    <article className='hidden lg:flex items-center gap-1 my-10 rocketIcon absolute top-10'>
                         <div>
                             <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
                             <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>

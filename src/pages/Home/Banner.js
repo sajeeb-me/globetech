@@ -1,15 +1,15 @@
 import React from 'react';
-import BannerImage from '../../assets/icons/Group 1.png'
 import Rocket from '../../assets/icons/Vector.png';
+import RightSideCircle from './RightSideCircle';
 
 const Banner = () => {
     return (
-        <section className='max-w-7xl mx-auto px-4 lg:px-20 grid grid-cols-1 md:grid-cols-2 items-center' style={{ color: '#28ACE2' }}>
+        <section className='min-h-screen max-w-7xl mx-auto px-4 lg:px-20 grid grid-cols-1 md:grid-cols-2 items-center overflow-hidden' style={{ color: '#28ACE2' }}>
             {/* left side */}
             <article className='text-left lg:pr-28'>
                 {/* rocket icon */}
                 <div
-                    className='flex items-center gap-1 pb-10 hover:translate-x-full duration-500 ease-in-out'
+                    className='flex items-center gap-1 pb-10 hover:translate-x-full duration-1000 ease-in-out'
                 >
                     <div>
                         <div style={{ borderColor: '#28ACE2' }} className='w-14 border my-1'></div>
@@ -33,8 +33,8 @@ const Banner = () => {
             </article>
 
             {/* right side */}
-            <article>
-                <img className='py-20 lg:pl-20' src={BannerImage} alt="" />
+            <article className='my-10 lg:m-20 flex justify-center lg:justify-start'>
+                <RightSideCircle />
             </article>
         </section>
     );
