@@ -1,7 +1,6 @@
 import React from 'react'
-import LoginForm from './LoginForm'
 import Back from '../../assets/icons/back.png'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 function Login() {
     const navigate = useNavigate()
@@ -31,7 +30,7 @@ function Login() {
                 className='col-span-3 flex justify-center items-center'
             >
                 <div className='bg-white text-black rounded-xl m-5 p-4 lg:p-10 w-full lg:w-1/2'>
-                    <LoginForm />
+                    <Outlet />
                 </div>
             </article>
         </section >
