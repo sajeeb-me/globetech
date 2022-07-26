@@ -90,6 +90,24 @@ function Navbar() {
                                     {item.name}
                                 </NavLink>
                             ))}
+                            {
+                                user ?
+                                    <button
+                                        onClick={() => signOut(auth)}
+                                        style={{ color: '#8FE5FF' }}
+                                        className='hover:underline px-3 py-2 rounded-md text-sm font-medium'
+                                    >
+                                        Logout
+                                    </button>
+                                    :
+                                    <NavLink
+                                        to='/login'
+                                        style={{ color: '#8FE5FF' }}
+                                        className='hover:underline px-3 py-2 rounded-md text-sm font-medium'
+                                    >
+                                        Login
+                                    </NavLink>
+                            }
                         </div>
                     </Disclosure.Panel>
                 </>
